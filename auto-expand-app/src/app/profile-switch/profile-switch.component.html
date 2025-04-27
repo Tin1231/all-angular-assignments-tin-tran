@@ -1,0 +1,28 @@
+<div style="padding:1rem; text-align:center;">
+    <button (click)="setView('name')">Name</button>
+    <button (click)="setView('age')">Age</button>
+    <button (click)="setView('job')">Job</button>
+  </div>
+  
+  <div [ngSwitch]="view" style="padding:1rem;">
+    <ng-container *ngSwitchDefault>
+      <h2>Welcome!</h2>
+      <p>Click a button above to see my profile.</p>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'name'">
+      <h2>Name</h2>
+      <p>My name is Tin.</p>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'age'">
+      <h2>Age</h2>
+      <p>I am 21 years old.</p>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'job'">
+      <h2>Job</h2>
+      <p>I am still a student.</p>
+    </ng-container>
+  </div>
+  

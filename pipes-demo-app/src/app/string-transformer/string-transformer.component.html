@@ -1,0 +1,10 @@
+<div>
+    <label for="userInput">Enter text:</label>
+    <input id="userInput" type="text" [(ngModel)]="inputText" placeholder="Type something here">
+  
+    <button (click)="transformText()">Transform</button>
+  
+    <p><strong>Original:</strong> {{ processedText }}</p>
+    <p><strong>Transformed:</strong> {{ processedText | lettersOnlyReverse }}</p>
+  </div>
+  

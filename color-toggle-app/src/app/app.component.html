@@ -1,0 +1,15 @@
+<h1>Property and Event Binding</h1>
+
+<div style="text-align:center; margin-top:2rem;">
+  <button
+    [style.backgroundColor]="buttonColor"
+    (click)="onButtonClick()">
+    Click me
+  </button>
+
+  <div *ngIf="showMessage" style="margin-top:1rem;">
+    <p>{{ messageContent }}</p>
+
+    <input [(ngModel)]="messageContent" placeholder="Type here…" />
+  </div>
+</div>

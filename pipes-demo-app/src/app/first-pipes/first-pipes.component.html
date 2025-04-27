@@ -1,0 +1,13 @@
+<h2>Built-In Pipes Demo</h2>
+
+<ul>
+  <li>
+    Today’s date: {{ today | date: 'longDate' }}
+  </li>
+  <li>
+    Amount as currency: {{ amount | currency:'USD':'symbol':'1.2-2' }}
+  </li>
+  <li>
+    Percent value: {{ percent | percent:'1.0-0' }}
+  </li>
+</ul>

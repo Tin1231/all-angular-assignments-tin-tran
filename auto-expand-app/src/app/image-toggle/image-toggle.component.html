@@ -1,0 +1,14 @@
+<div style="text-align:center; margin-top:2rem;">
+    <button (click)="toggleImage()">
+      {{ show ? 'Hide' : 'Show' }} Image
+    </button>
+  
+    <div *ngIf="show" style="margin-top:1rem;">
+      <img 
+        src="https://angular.io/assets/images/logos/angular/angular.svg" 
+        alt="Angular Logo"
+        style="max-width:200px; border:1px solid #ccc; padding:8px;"
+      />
+    </div>
+  </div>
+  

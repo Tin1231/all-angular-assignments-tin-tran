@@ -1,0 +1,8 @@
+<button (click)="toggleImage()">
+    {{ show ? 'Hide' : 'Show' }} Image
+  </button>
+  <div *ngIf="show">
+    <img src="https://angular.io/assets/images/logos/angular/angular.svg"
+    width="120"/>
+  </div>
+  

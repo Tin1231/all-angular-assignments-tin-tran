@@ -1,0 +1,33 @@
+<p>
+  This app generates a random number (1–100), adds your input,
+  then lets you divide that sum by a number you choose.
+</p>
+
+<div class="controls">
+  <label for="input-num">Enter a number to add:</label>
+  <input
+    id="input-num"
+    type="number"
+    [(ngModel)]="inputNumber"
+    placeholder="e.g. 5"
+  />
+
+  <button (click)="generateRandom()">Generate & Add</button>
+</div>
+
+<p *ngIf="sumResult !== null">
+  {{ randomNumber }} + {{ inputNumber }} = {{ sumResult }}
+</p>
+
+<div *ngIf="sumResult !== null" class="controls" style="margin-top:1rem;">
+  <label for="divisor">Divide the sum by:</label>
+  <select id="divisor" [(ngModel)]="divisor">
+    <option *ngFor="let n of [2,3,4,5,6,7,8,9,10]" [value]="n">{{ n }}</option>
+  </select>
+
+  <button (click)="divide()">Divide</button>
+</div>
+
+<p *ngIf="divisionResult !== null">
+  {{ sumResult }} ÷ {{ divisor }} = {{ divisionResult }}
+</p>

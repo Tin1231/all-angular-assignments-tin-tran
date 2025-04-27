@@ -1,0 +1,14 @@
+<div style="text-align:center; margin-top:2rem;">
+    <input
+      type="text"
+      [(ngModel)]="inputText"
+      placeholder="Enter any text"
+    />
+    <button (click)="onTransform()">Transform</button>
+  </div>
+  
+  <div *ngIf="showResult" style="margin-top:1rem; text-align:center;">
+    <p><strong>Original:</strong> {{ inputText }}</p>
+    <p><strong>Transformed:</strong> {{ inputText | reverseLetters }}</p>
+  </div>
+  
